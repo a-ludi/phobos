@@ -1424,7 +1424,7 @@ if (Rs.length >= 2 &&
     assert(m.empty);
 }
 
-// test sortedness with predicate `less` that contradicts `==`
+// Issue 21810: Check for sortedness must not use `==`
 @nogc @safe pure nothrow unittest
 {
     import std.algorithm.comparison : equal;
